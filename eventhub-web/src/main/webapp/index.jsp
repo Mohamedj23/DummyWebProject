@@ -1,1 +1,1 @@
-<meta http-equiv="refresh" content="0;url=level2" />
+<meta http-equiv="refresh" content="0;url=dummy/level2" />
