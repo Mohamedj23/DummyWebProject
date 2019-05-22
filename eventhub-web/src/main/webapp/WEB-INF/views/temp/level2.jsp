@@ -11,9 +11,11 @@
 <head>
     <c:set var="contextPath" value="${pageContext.request.contextPath}" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href="${contextPath}/resources/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="${contextPath}/resources/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="${contextPath}/resources/vendors/nprogress/nprogress.css" rel="stylesheet">
@@ -206,61 +208,61 @@
                                 <li>
                                     <a>
                                         <span class="image"><img src='${contextPath}/resources/images/img.jpg'/></span>
-                                <span>
+                                        <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
                         </span>
-                                <span class="message">
+                                        <span class="message">
                           Film festivals used to be do-or-die moments for movie makers. They were where...
                         </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span class="image"><img src='${contextPath}/resources/images/img.jpg' alt="Profile Image" /></span>
-                                <span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="image"><img src='${contextPath}/resources/images/img.jpg' alt="Profile Image" /></span>
+                                        <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
                         </span>
-                                <span class="message">
+                                        <span class="message">
                           Film festivals used to be do-or-die moments for movie makers. They were where...
                         </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span class="image"><img src='${contextPath}/resources/images/img.jpg' alt="Profile Image" /></span>
-                                <span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="image"><img src='${contextPath}/resources/images/img.jpg' alt="Profile Image" /></span>
+                                        <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
                         </span>
-                                <span class="message">
+                                        <span class="message">
                           Film festivals used to be do-or-die moments for movie makers. They were where...
                         </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <span class="image"><img src='${contextPath}/resources/images/img.jpg' alt="Profile Image" /></span>
-                                <span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <span class="image"><img src='${contextPath}/resources/images/img.jpg' alt="Profile Image" /></span>
+                                        <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
                         </span>
-                                <span class="message">
+                                        <span class="message">
                           Film festivals used to be do-or-die moments for movie makers. They were where...
                         </span>
-                            </a>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="text-center">
+                                        <a>
+                                            <strong>See All Alerts</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
                         </li>
-                        <li>
-                            <div class="text-center">
-                                <a>
-                                    <strong>See All Alerts</strong>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                    </li>
                     </ul>
                 </nav>
             </div>
