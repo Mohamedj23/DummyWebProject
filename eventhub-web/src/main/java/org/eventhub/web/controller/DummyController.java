@@ -29,6 +29,37 @@ public class DummyController {
 
     //Menna
 
+    @GetMapping("/profile")
+    public String profile(){
+        return "profile";
+    }
+
+    @GetMapping("/projectdetail")
+    public String projectDetail(){
+        return "projectDetail";
+    }
+
+    @GetMapping("/projects")
+    public String projects(){
+        return "projects";
+    }
+    @GetMapping("/tables")
+    public String tables(){
+        return "tables";
+    }
+    @GetMapping("/tablesDynamic")
+    public String tablesDynamic(){
+        return "tablesDynamic";
+    }
+    @GetMapping("/typography")
+    public String typography(){
+        return "typography";
+    }
+    @GetMapping("/widgets")
+    public String widgets(){
+        return "widgets";
+    }
+
 
 
 
