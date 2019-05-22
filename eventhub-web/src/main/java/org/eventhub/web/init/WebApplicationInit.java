@@ -1,6 +1,5 @@
 package org.eventhub.web.init;
 import org.eventhub.web.config.AppConfig;
-import org.eventhub.web.config.SecurityConfig;
 import org.eventhub.web.config.WebAppConfig;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
@@ -8,7 +7,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 public class WebApplicationInit extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{AppConfig.class, SecurityConfig.class};
+        return new Class[]{AppConfig.class};
     }
 
     @Override

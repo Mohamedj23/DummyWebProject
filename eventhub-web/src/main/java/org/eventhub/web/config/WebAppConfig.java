@@ -13,7 +13,7 @@ public class WebAppConfig   {
     @Bean
     public InternalResourceViewResolver internalResourceViewResolver(){
         InternalResourceViewResolver viewResolver=new InternalResourceViewResolver();
-        viewResolver.setPrefix("/WEB-INF/views/");
+        viewResolver.setPrefix("/WEB-INF/views/temp/");
         viewResolver.setSuffix(".jsp");
         return viewResolver;
     }
