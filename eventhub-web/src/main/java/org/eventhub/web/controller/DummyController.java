@@ -142,15 +142,9 @@ public class DummyController {
         return "fixed_sidebar";
     }
 
-    @GetMapping("/form")
-    public String form(Model model)
-    {
-        SystemUser systemUser=new SystemUser();
-        systemUser.setFirstName("AHmed");
-        model.addAttribute("user",systemUser);
-        return "form";
-    }
-    
+
+
+
     
     //Menna
     @GetMapping("/profile")
