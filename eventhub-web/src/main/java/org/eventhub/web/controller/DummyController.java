@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/dummy")
 public class DummyController {
 
-    @GetMapping("/calender")
+    @GetMapping("/calendar")
     public String calender(){
         return "Calendar";
     }
@@ -17,6 +17,54 @@ public class DummyController {
 
 
     //Amr
+
+    @GetMapping("/form_buttons")
+    public String form_buttons(){
+
+        return "form_buttons";
+    }
+
+    @GetMapping("/form_upload")
+    public String form_upload(){
+
+        return "form_upload";
+    }
+
+    @GetMapping("/form_validation")
+    public String form_validation(){
+
+        return "form_validation";
+    }
+
+    @GetMapping("/form_wizards")
+    public String form_wizards(){
+
+        return "form_wizards";
+    }
+
+    @GetMapping("/form_advanced")
+    public String form_advanced(){
+
+        return "form_advanced";
+    }
+
+    @GetMapping("/general_elements")
+    public String general_elements(){
+
+        return "general_elements";
+    }
+
+    @GetMapping("/glyphicons")
+    public String glyphicons(){
+
+        return "glyphicons";
+    }
+
+    @GetMapping("/icons")
+    public String icons(){
+
+        return "icons";
+    }
 
 
 
@@ -84,7 +132,6 @@ public class DummyController {
     public String level2(){
         return "level2";
     }
-
     @GetMapping("/login")
     public String login(){return "login";}
 
