@@ -1,6 +1,8 @@
 package org.eventhub.web.controller;
 
+import org.eventhub.common.model.entity.SystemUser;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -141,7 +143,11 @@ public class DummyController {
     }
 
     @GetMapping("/form")
-    public String form() {
+    public String form(Model model)
+    {
+        SystemUser systemUser=new SystemUser();
+        systemUser.setFirstName("AHmed");
+        model.addAttribute("user",systemUser);
         return "form";
     }
     

@@ -5,15 +5,10 @@
  */
 package org.eventhub.common.model.entity;
 
+import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.UUID;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
@@ -47,12 +42,12 @@ public class SessionInHall extends BaseEntity implements Serializable {
         this.orderNumber = order;
     }
 
-    public int getOrder() {
+    public int getOrderNumber() {
         return orderNumber;
     }
 
-    public void setOrder(int order) {
-        this.orderNumber = order;
+    public void setOrderNumber(int orderNumber) {
+        this.orderNumber = orderNumber;
     }
 
     public Hall getHall() {
@@ -70,5 +65,4 @@ public class SessionInHall extends BaseEntity implements Serializable {
     public void setSession(Session session) {
         this.session = session;
     }
-
 }

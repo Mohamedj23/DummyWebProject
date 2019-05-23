@@ -5,17 +5,11 @@
  */
 package org.eventhub.common.model.entity;
 
-import java.io.Serializable;
-import java.util.Set;
-import java.util.UUID;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
+import java.io.Serializable;
+import java.util.List;
+import java.util.UUID;
 
 /**
  *
@@ -33,7 +27,7 @@ public class SponsorshipType extends BaseEntity implements Serializable {
     @Column(name = "description",length=300)
     private String description;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "sponsorshipType")
-    private Set<Sponsor> sponsors;
+    private List<Sponsor> sponsors;
 
     public SponsorshipType() {
     }
@@ -63,13 +57,11 @@ public class SponsorshipType extends BaseEntity implements Serializable {
         this.description = description;
     }
 
-    @XmlTransient
-    public Set<Sponsor> getSponsors() {
+    public List<Sponsor> getSponsors() {
         return sponsors;
     }
 
-    public void setSponsors(Set<Sponsor> sponsors) {
+    public void setSponsors(List<Sponsor> sponsors) {
         this.sponsors = sponsors;
     }
-
 }

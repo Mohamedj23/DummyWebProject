@@ -5,14 +5,10 @@
  */
 package org.eventhub.common.model.entity;
 
-import java.util.UUID;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
-import javax.persistence.PrePersist;
 import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+import java.util.UUID;
 
 /**
  *

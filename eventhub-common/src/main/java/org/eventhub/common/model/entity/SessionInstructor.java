@@ -5,17 +5,11 @@
  */
 package org.eventhub.common.model.entity;
 
-import java.io.Serializable;
-import java.util.Set;
-import java.util.UUID;
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
+import java.io.Serializable;
+import java.util.List;
+import java.util.UUID;
 
 /**
  *
@@ -34,7 +28,7 @@ public class SessionInstructor extends BaseEntity implements Serializable {
     @ManyToOne(optional = false)
     private Session session;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "sessionInstructor")
-    private Set<Material> materials;
+    private List<Material> materials;
 
     public SessionInstructor() {
     }
@@ -59,13 +53,11 @@ public class SessionInstructor extends BaseEntity implements Serializable {
         this.session = session;
     }
 
-    @XmlTransient
-    public Set<Material> getMaterials() {
+    public List<Material> getMaterials() {
         return materials;
     }
 
-    public void setMaterials(Set<Material> materials) {
+    public void setMaterials(List<Material> materials) {
         this.materials = materials;
     }
-
 }

@@ -5,13 +5,13 @@
  */
 package org.eventhub.common.model.entity;
 
-import java.io.Serializable;
-import java.util.UUID;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
+import java.util.UUID;
 
 /**
  *

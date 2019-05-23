@@ -5,22 +5,12 @@
  */
 package org.eventhub.common.model.entity;
 
+import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
+import java.util.List;
 import java.util.UUID;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -58,11 +48,11 @@ public class Session extends BaseEntity implements Serializable {
     @ManyToOne(optional = false)
     private SessionType sessionType;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "session")
-    private Set<SessionInHall> sessionInHalls;
+    private List<SessionInHall> sessionInHalls;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "session")
-    private Set<SessionInstructor> sessionInstructors;
+    private List<SessionInstructor> sessionInstructors;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "session")
-    private Set<VipSpeaksInSession> vipSpeaksInSessions;
+    private List<VipSpeaksInSession> vipSpeaksInSessions;
 
     public Session() {
     }
@@ -144,31 +134,27 @@ public class Session extends BaseEntity implements Serializable {
         this.sessionType = sessionType;
     }
 
-    @XmlTransient
-    public Set<SessionInHall> getSessionInHalls() {
+    public List<SessionInHall> getSessionInHalls() {
         return sessionInHalls;
     }
 
-    public void setSessionInHalls(Set<SessionInHall> sessionInHalls) {
+    public void setSessionInHalls(List<SessionInHall> sessionInHalls) {
         this.sessionInHalls = sessionInHalls;
     }
 
-    @XmlTransient
-    public Set<SessionInstructor> getSessionInstructors() {
+    public List<SessionInstructor> getSessionInstructors() {
         return sessionInstructors;
     }
 
-    public void setSessionInstructors(Set<SessionInstructor> sessionInstructors) {
+    public void setSessionInstructors(List<SessionInstructor> sessionInstructors) {
         this.sessionInstructors = sessionInstructors;
     }
 
-    @XmlTransient
-    public Set<VipSpeaksInSession> getVipSpeaksInSessions() {
+    public List<VipSpeaksInSession> getVipSpeaksInSessions() {
         return vipSpeaksInSessions;
     }
 
-    public void setVipSpeaksInSessions(Set<VipSpeaksInSession> vipSpeaksInSessions) {
+    public void setVipSpeaksInSessions(List<VipSpeaksInSession> vipSpeaksInSessions) {
         this.vipSpeaksInSessions = vipSpeaksInSessions;
     }
-
 }

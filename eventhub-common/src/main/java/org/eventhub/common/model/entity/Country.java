@@ -5,16 +5,12 @@
  */
 package org.eventhub.common.model.entity;
 
-import java.io.Serializable;
-import java.util.Set;
-import java.util.UUID;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import java.io.Serializable;
+import java.util.List;
+import java.util.UUID;
 
 /**
  *
@@ -30,7 +26,7 @@ public class Country extends BaseEntity implements Serializable {
     @Column(name = "name",length=45)
     private String name;
     @OneToMany(mappedBy = "country")
-    private Set<SystemUser> systemUsers;
+    private List<SystemUser> systemUsers;
 
     public Country() {
     }
@@ -53,11 +49,11 @@ public class Country extends BaseEntity implements Serializable {
     }
 
     @XmlTransient
-    public Set<SystemUser> getSystemUsers() {
+    public List<SystemUser> getSystemUsers() {
         return systemUsers;
     }
 
-    public void setSystemUsers(Set<SystemUser> systemUsers) {
+    public void setSystemUsers(List<SystemUser> systemUsers) {
         this.systemUsers = systemUsers;
     }
 

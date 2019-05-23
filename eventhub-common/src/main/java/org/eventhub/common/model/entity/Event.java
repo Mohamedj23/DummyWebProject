@@ -5,23 +5,12 @@
  */
 package org.eventhub.common.model.entity;
 
+import javax.persistence.*;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
+import java.util.List;
 import java.util.UUID;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -53,11 +42,9 @@ public class Event extends BaseEntity implements Serializable {
     private String slogan;
     @Column(name = "abbreviation",length=45)
     private String abbreviation;
-    @Basic(optional = false)
     @Column(name = "start_date")
     @Temporal(TemporalType.TIMESTAMP)
     private Date startDate;
-    @Basic(optional = false)
     @Column(name = "end_date")
     @Temporal(TemporalType.TIMESTAMP)
     private Date endDate;
@@ -72,15 +59,15 @@ public class Event extends BaseEntity implements Serializable {
     @Column(name = "style",length=10)
     private String style;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "event")
-    private Set<Sponsor> sponsors;
+    private List<Sponsor> sponsors;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "event")
-    private Set<Session> sessions;
+    private List<Session> sessions;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "event")
-    private Set<Hall> halls;
+    private List<Hall> halls;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "event")
-    private Set<EventGuest> eventGuests;
+    private List<EventGuest> eventGuests;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "event")
-    private Set<EventCoordinator> eventCoordinators;
+    private List<EventCoordinator> eventCoordinators;
     @JoinColumn(name = "organization", referencedColumnName = "uuid")
     @ManyToOne(optional = false)
     private Organization organization;
@@ -209,48 +196,51 @@ public class Event extends BaseEntity implements Serializable {
         this.published = published;
     }
 
-    @XmlTransient
-    public Set<Sponsor> getSponsors() {
+    public String getStyle() {
+        return style;
+    }
+
+    public void setStyle(String style) {
+        this.style = style;
+    }
+
+    public List<Sponsor> getSponsors() {
         return sponsors;
     }
 
-    public void setSponsors(Set<Sponsor> sponsors) {
+    public void setSponsors(List<Sponsor> sponsors) {
         this.sponsors = sponsors;
     }
 
-    @XmlTransient
-    public Set<Session> getSessions() {
+    public List<Session> getSessions() {
         return sessions;
     }
 
-    public void setSessions(Set<Session> sessions) {
+    public void setSessions(List<Session> sessions) {
         this.sessions = sessions;
     }
 
-    @XmlTransient
-    public Set<Hall> getHalls() {
+    public List<Hall> getHalls() {
         return halls;
     }
 
-    public void setHalls(Set<Hall> halls) {
+    public void setHalls(List<Hall> halls) {
         this.halls = halls;
     }
 
-    @XmlTransient
-    public Set<EventGuest> getEventGuests() {
+    public List<EventGuest> getEventGuests() {
         return eventGuests;
     }
 
-    public void setEventGuests(Set<EventGuest> eventGuests) {
+    public void setEventGuests(List<EventGuest> eventGuests) {
         this.eventGuests = eventGuests;
     }
 
-    @XmlTransient
-    public Set<EventCoordinator> getEventCoordinators() {
+    public List<EventCoordinator> getEventCoordinators() {
         return eventCoordinators;
     }
 
-    public void setEventCoordinators(Set<EventCoordinator> eventCoordinators) {
+    public void setEventCoordinators(List<EventCoordinator> eventCoordinators) {
         this.eventCoordinators = eventCoordinators;
     }
 
@@ -269,13 +259,4 @@ public class Event extends BaseEntity implements Serializable {
     public void setSystemUser(SystemUser systemUser) {
         this.systemUser = systemUser;
     }
-
-    public String getStyle() {
-        return style;
-    }
-
-    public void setStyle(String style) {
-        this.style = style;
-    }
-
 }

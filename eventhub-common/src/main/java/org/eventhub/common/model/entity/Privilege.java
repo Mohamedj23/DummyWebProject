@@ -5,17 +5,11 @@
  */
 package org.eventhub.common.model.entity;
 
-import java.io.Serializable;
-import java.util.Set;
-import java.util.UUID;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
+import java.io.Serializable;
+import java.util.List;
+import java.util.UUID;
 
 /**
  *
@@ -33,7 +27,7 @@ public class Privilege extends BaseEntity implements Serializable {
     @Column(name = "description",length=100)
     private String description;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "privilege")
-    private Set<RolePrivilege> rolePrivileges;
+    private List<RolePrivilege> rolePrivileges;
 
     public Privilege() {
     }
@@ -63,13 +57,11 @@ public class Privilege extends BaseEntity implements Serializable {
         this.description = description;
     }
 
-    @XmlTransient
-    public Set<RolePrivilege> getRolePrivileges() {
+    public List<RolePrivilege> getRolePrivileges() {
         return rolePrivileges;
     }
 
-    public void setRolePrivileges(Set<RolePrivilege> rolePrivileges) {
+    public void setRolePrivileges(List<RolePrivilege> rolePrivileges) {
         this.rolePrivileges = rolePrivileges;
     }
-
 }

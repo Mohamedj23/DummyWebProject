@@ -5,20 +5,11 @@
  */
 package org.eventhub.common.model.entity;
 
-import java.io.Serializable;
-import java.util.Set;
-import java.util.UUID;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
+import java.io.Serializable;
+import java.util.List;
+import java.util.UUID;
 
 /**
  *
@@ -40,7 +31,7 @@ public class Vip extends BaseEntity implements Serializable {
     @Column(name = "image")
     private byte[] image;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "vip")
-    private Set<VipSpeaksInSession> vipSpeaksInSessions;
+    private List<VipSpeaksInSession> vipSpeaksInSessions;
     @JoinColumn(name = "job_title", referencedColumnName = "uuid")
     @ManyToOne(optional = false)
     private JobTitle jobTitle;
@@ -85,12 +76,11 @@ public class Vip extends BaseEntity implements Serializable {
         this.image = image;
     }
 
-    @XmlTransient
-    public Set<VipSpeaksInSession> getVipSpeaksInSessions() {
+    public List<VipSpeaksInSession> getVipSpeaksInSessions() {
         return vipSpeaksInSessions;
     }
 
-    public void setVipSpeaksInSessions(Set<VipSpeaksInSession> vipSpeaksInSessions) {
+    public void setVipSpeaksInSessions(List<VipSpeaksInSession> vipSpeaksInSessions) {
         this.vipSpeaksInSessions = vipSpeaksInSessions;
     }
 
@@ -109,5 +99,4 @@ public class Vip extends BaseEntity implements Serializable {
     public void setOrganization(Organization organization) {
         this.organization = organization;
     }
-
 }

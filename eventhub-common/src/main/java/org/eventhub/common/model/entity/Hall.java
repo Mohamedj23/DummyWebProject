@@ -5,19 +5,11 @@
  */
 package org.eventhub.common.model.entity;
 
-import java.io.Serializable;
-import java.util.Set;
-import java.util.UUID;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
+import java.io.Serializable;
+import java.util.List;
+import java.util.UUID;
 
 /**
  *
@@ -42,7 +34,7 @@ public class Hall extends BaseEntity implements Serializable {
     @ManyToOne(optional = false)
     private Event event;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "hall")
-    private Set<SessionInHall> sessionInHalls;
+    private List<SessionInHall> sessionInHalls;
 
     public Hall() {
     }
@@ -96,13 +88,11 @@ public class Hall extends BaseEntity implements Serializable {
         this.event = event;
     }
 
-    @XmlTransient
-    public Set<SessionInHall> getSessionInHalls() {
+    public List<SessionInHall> getSessionInHalls() {
         return sessionInHalls;
     }
 
-    public void setSessionInHalls(Set<SessionInHall> sessionInHalls) {
+    public void setSessionInHalls(List<SessionInHall> sessionInHalls) {
         this.sessionInHalls = sessionInHalls;
     }
-
 }

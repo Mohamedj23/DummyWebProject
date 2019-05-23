@@ -5,17 +5,11 @@
  */
 package org.eventhub.common.model.entity;
 
-import java.io.Serializable;
-import java.util.Set;
-import java.util.UUID;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
+import java.io.Serializable;
+import java.util.List;
+import java.util.UUID;
 
 /**
  *
@@ -36,7 +30,7 @@ public class SessionType extends BaseEntity implements Serializable {
     @Column(name = "description",length=500)
     private String description;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "sessionType")
-    private Set<Session> sessions;
+    private List<Session> sessions;
 
     public SessionType() {
     }
@@ -59,23 +53,6 @@ public class SessionType extends BaseEntity implements Serializable {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    @XmlTransient
-    public Set<Session> getSessions() {
-        return sessions;
-    }
-
-    public void setSessions(Set<Session> sessions) {
-        this.sessions = sessions;
-    }
-
     public String getStyle() {
         return style;
     }
@@ -84,4 +61,19 @@ public class SessionType extends BaseEntity implements Serializable {
         this.style = style;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public List<Session> getSessions() {
+        return sessions;
+    }
+
+    public void setSessions(List<Session> sessions) {
+        this.sessions = sessions;
+    }
 }
