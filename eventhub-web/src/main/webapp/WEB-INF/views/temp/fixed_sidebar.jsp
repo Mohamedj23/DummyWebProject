@@ -1,4 +1,3 @@
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -12,14 +11,15 @@
         <link href="${contextPath}/resources/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="${contextPath}/resources/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link href="${contextPath}/resources/vendors/nprogress/nprogress.css" rel="stylesheet">
+        <link href="${contextPath}/resources/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
         <link href="${contextPath}/resources/build/css/custom.min.css" rel="stylesheet">
-        <title>Chart JS2</title>
+        <title>Fixed Sidebar</title>
     </head>
 
     <body class="nav-md">
         <div class="container body">
             <div class="main_container">
-                <div class="col-md-3 left_col">
+                <div class="col-md-3 left_col menu_fixed">
                     <div class="left_col scroll-view">
                         <div class="navbar nav_title" style="border: 0;">
                             <a href="index" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
@@ -187,7 +187,7 @@
                                             </a>
                                         </li>
                                         <li><a href="javascript:;">Help</a></li>
-                                        <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                                        <li><a href="login"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                                     </ul>
                                 </li>
 
@@ -266,188 +266,9 @@
                     <div class="">
                         <div class="page-title">
                             <div class="title_left">
-                                <h3>Chart Js <small>Some examples to get you started</small></h3>
-                            </div>
-
-                            <div class="title_right">
-                                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search for...">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default" type="button">Go!</button>
-                                        </span>
-                                    </div>
-                                </div>
+                                <h3>Fixed Sidebar <small> Just add class <strong>menu_fixed</strong></small></h3>
                             </div>
                         </div>
-
-                        <div class="clearfix"></div>
-
-                        <div class="row">
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="x_panel">
-                                    <div class="x_title">
-                                        <h2>Line Graph <small>Sessions</small></h2>
-                                        <ul class="nav navbar-right panel_toolbox">
-                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                            </li>
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#">Settings 1</a>
-                                                    </li>
-                                                    <li><a href="#">Settings 2</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="x_content">
-                                        <canvas id="lineChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="x_panel">
-                                    <div class="x_title">
-                                        <h2>Bar Graph <small>Sessions</small></h2>
-                                        <ul class="nav navbar-right panel_toolbox">
-                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                            </li>
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#">Settings 1</a>
-                                                    </li>
-                                                    <li><a href="#">Settings 2</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="x_content">
-                                        <canvas id="mybarChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="x_panel">
-                                    <div class="x_title">
-                                        <h2>Donut Chart Graph <small>Sessions</small></h2>
-                                        <ul class="nav navbar-right panel_toolbox">
-                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                            </li>
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#">Settings 1</a>
-                                                    </li>
-                                                    <li><a href="#">Settings 2</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="x_content">
-                                        <canvas id="canvasDoughnut"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="x_panel">
-                                    <div class="x_title">
-                                        <h2>Radar Chart <small>Sessions</small></h2>
-                                        <ul class="nav navbar-right panel_toolbox">
-                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                            </li>
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#">Settings 1</a>
-                                                    </li>
-                                                    <li><a href="#">Settings 2</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="x_content">
-                                        <canvas id="canvasRadar"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="x_panel">
-                                    <div class="x_title">
-                                        <h2>Pie Area Chart <small>Sessions</small></h2>
-                                        <ul class="nav navbar-right panel_toolbox">
-                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                            </li>
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#">Settings 1</a>
-                                                    </li>
-                                                    <li><a href="#">Settings 2</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="x_content">
-                                        <canvas id="polarArea"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-sm-6 col-xs-12">
-                                <div class="x_panel">
-                                    <div class="x_title">
-                                        <h2>Pie Chart Graph <small>Sessions</small></h2>
-                                        <ul class="nav navbar-right panel_toolbox">
-                                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                            </li>
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="#">Settings 1</a>
-                                                    </li>
-                                                    <li><a href="#">Settings 2</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="x_content">
-                                        <canvas id="pieChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <br />
                     </div>
                 </div>
                 <!-- /page content -->
@@ -471,11 +292,10 @@
         <script src="${contextPath}/resources/vendors/fastclick/lib/fastclick.js"></script>
         <!-- NProgress -->
         <script src="${contextPath}/resources/vendors/nprogress/nprogress.js"></script>
-        <!-- Chart.js -->
-        <script src="${contextPath}/resources/vendors/Chart.js/dist/Chart.min.js"></script>
+        <!-- jQuery custom content scroller -->
+        <script src="${contextPath}/resources/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
 
         <!-- Custom Theme Scripts -->
         <script src="${contextPath}/resources/build/js/custom.min.js"></script>
-
     </body>
 </html>
