@@ -1,3 +1,4 @@
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Mohamed
@@ -6,9 +7,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
-<html lang="en">
+<html>
 <head>
     <c:set var="contextPath" value="${pageContext.request.contextPath}" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -20,9 +20,10 @@
     <title>Gentelella Alela! | </title>
 
     <!-- Bootstrap -->
+
     <link href="${contextPath}/resources/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="${contextPath}/resources/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="${contextPath}/resources/vendors/font-awesome/css/font-awesome.css" rel="stylesheet">
     <!-- NProgress -->
     <link href="${contextPath}/resources/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- FullCalendar -->
@@ -47,7 +48,7 @@
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                     <div class="profile_pic">
-                        <img src="${contextPath}/resources/images/img.jpg" alt="..." class="img-circle profile_img">
+                        <img src='${contextPath}/resources/images/img.jpg' alt="..." class="img-circle profile_img">
                     </div>
                     <div class="profile_info">
                         <span>Welcome,</span>
@@ -192,7 +193,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="${contextPath}/resources/images/img.jpg" alt="">John Doe
+                                <img src='${contextPath}/resources/images/img.jpg' alt="">John Doe
                                 <span class=" fa fa-angle-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -216,7 +217,7 @@
                             <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                                 <li>
                                     <a>
-                                        <span class="image"><img src="${contextPath}/resources/images/img.jpg" alt="Profile Image" /></span>
+                                        <span class="image"><img src='${contextPath}/resources/images/img.jpg' alt="Profile Image" /></span>
                                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -228,7 +229,7 @@
                                 </li>
                                 <li>
                                     <a>
-                                        <span class="image"><img src="${contextPath}/resources/images/img.jpg" alt="Profile Image" /></span>
+                                        <span class="image"><img src='${contextPath}/resources/images/img.jpg' alt="Profile Image" /></span>
                                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -240,7 +241,7 @@
                                 </li>
                                 <li>
                                     <a>
-                                        <span class="image"><img src="${contextPath}/resources/images/img.jpg" alt="Profile Image" /></span>
+                                        <span class="image"><img src='${contextPath}/resources/images/img.jpg' alt="Profile Image" /></span>
                                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -252,7 +253,7 @@
                                 </li>
                                 <li>
                                     <a>
-                                        <span class="image"><img src="${contextPath}/resources/images/img.jpg" alt="Profile Image" /></span>
+                                        <span class="image"><img src='${contextPath}/resources/images/img.jpg' alt="Profile Image" /></span>
                                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>

@@ -1,13 +1,14 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
-  User: Eraky
+  User: Mohamed
   Date: 5/22/2019
-  Time: 8:26 PM
+  Time: 11:53 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="en">
+
 <head>
     <c:set var="contextPath" value="${pageContext.request.contextPath}" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -16,14 +17,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>Gentelella Alela! | </title>
 
+    <!-- Bootstrap -->
     <link href="${contextPath}/resources/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link href="${contextPath}/resources/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
     <link href="${contextPath}/resources/vendors/nprogress/nprogress.css" rel="stylesheet">
-    <link href="${contextPath}/resources/build/css/custom.min.css" rel="stylesheet">
 
-    <title>level2</title>
+    <!-- Custom styling plus plugins -->
+    <link href="${contextPath}/resources/build/css/custom.min.css" rel="stylesheet">
 </head>
+
 <body class="nav-md">
 <div class="container body">
     <div class="main_container">
@@ -274,7 +280,7 @@
             <div class="">
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>Invoice <small>Some examples to get you started</small></h3>
+                        <h3> Media Gallery <small> gallery design</small> </h3>
                     </div>
 
                     <div class="title_right">
@@ -282,7 +288,7 @@
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Search for...">
                                 <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Go!</button>
+                        <button class="btn btn-default" type="button">Go!</button>
                     </span>
                             </div>
                         </div>
@@ -295,7 +301,7 @@
                     <div class="col-md-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>Invoice Design <small>Sample user invoice design</small></h2>
+                                <h2>Media Gallery <small> gallery design </small></h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -315,156 +321,198 @@
                             </div>
                             <div class="x_content">
 
-                                <section class="content invoice">
-                                    <!-- title row -->
-                                    <div class="row">
-                                        <div class="col-xs-12 invoice-header">
-                                            <h1>
-                                                <i class="fa fa-globe"></i> Invoice.
-                                                <small class="pull-right">Date: 16/08/2016</small>
-                                            </h1>
-                                        </div>
-                                        <!-- /.col -->
-                                    </div>
-                                    <!-- info row -->
-                                    <div class="row invoice-info">
-                                        <div class="col-sm-4 invoice-col">
-                                            From
-                                            <address>
-                                                <strong>Iron Admin, Inc.</strong>
-                                                <br>795 Freedom Ave, Suite 600
-                                                <br>New York, CA 94107
-                                                <br>Phone: 1 (804) 123-9876
-                                                <br>Email: ironadmin.com
-                                            </address>
-                                        </div>
-                                        <!-- /.col -->
-                                        <div class="col-sm-4 invoice-col">
-                                            To
-                                            <address>
-                                                <strong>John Doe</strong>
-                                                <br>795 Freedom Ave, Suite 600
-                                                <br>New York, CA 94107
-                                                <br>Phone: 1 (804) 123-9876
-                                                <br>Email: jon@ironadmin.com
-                                            </address>
-                                        </div>
-                                        <!-- /.col -->
-                                        <div class="col-sm-4 invoice-col">
-                                            <b>Invoice #007612</b>
-                                            <br>
-                                            <br>
-                                            <b>Order ID:</b> 4F3S8J
-                                            <br>
-                                            <b>Payment Due:</b> 2/22/2014
-                                            <br>
-                                            <b>Account:</b> 968-34567
-                                        </div>
-                                        <!-- /.col -->
-                                    </div>
-                                    <!-- /.row -->
+                                <div class="row">
 
-                                    <!-- Table row -->
-                                    <div class="row">
-                                        <div class="col-xs-12 table">
-                                            <table class="table table-striped">
-                                                <thead>
-                                                <tr>
-                                                    <th>Qty</th>
-                                                    <th>Product</th>
-                                                    <th>Serial #</th>
-                                                    <th style="width: 59%">Description</th>
-                                                    <th>Subtotal</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Call of Duty</td>
-                                                    <td>455-981-221</td>
-                                                    <td>El snort testosterone trophy driving gloves handsome gerry Richardson helvetica tousled street art master testosterone trophy driving gloves handsome gerry Richardson
-                                                    </td>
-                                                    <td>$64.50</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Need for Speed IV</td>
-                                                    <td>247-925-726</td>
-                                                    <td>Wes Anderson umami biodiesel</td>
-                                                    <td>$50.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Monsters DVD</td>
-                                                    <td>735-845-642</td>
-                                                    <td>Terry Richardson helvetica tousled street art master, El snort testosterone trophy driving gloves handsome letterpress erry Richardson helvetica tousled</td>
-                                                    <td>$10.70</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Grown Ups Blue Ray</td>
-                                                    <td>422-568-642</td>
-                                                    <td>Tousled lomo letterpress erry Richardson helvetica tousled street art master helvetica tousled street art master, El snort testosterone</td>
-                                                    <td>$25.99</td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <!-- /.col -->
-                                    </div>
-                                    <!-- /.row -->
+                                    <p>Media gallery design emelents</p>
 
-                                    <div class="row">
-                                        <!-- accepted payments column -->
-                                        <div class="col-xs-6">
-                                            <p class="lead">Payment Methods:</p>
-                                            <img src='${contextPath}/resources/images/visa.png' alt="Visa">
-                                            <img src='${contextPath}/resources/images/mastercard.png' alt="Mastercard">
-                                            <img src='${contextPath}/resources/images/american-express.png' alt="American Express">
-                                            <img src='${contextPath}/resources/images/paypal.png' alt="Paypal">
-                                            <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
-                                                Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
-                                            </p>
-                                        </div>
-                                        <!-- /.col -->
-                                        <div class="col-xs-6">
-                                            <p class="lead">Amount Due 2/22/2014</p>
-                                            <div class="table-responsive">
-                                                <table class="table">
-                                                    <tbody>
-                                                    <tr>
-                                                        <th style="width:50%">Subtotal:</th>
-                                                        <td>$250.30</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Tax (9.3%)</th>
-                                                        <td>$10.34</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Shipping:</th>
-                                                        <td>$5.80</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Total:</th>
-                                                        <td>$265.24</td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
+                                    <div class="col-md-55">
+                                        <div class="thumbnail">
+                                            <div class="image view view-first">
+                                                <img style="width: 100%; display: block;" src='${contextPath}/resources/images/media.jpg' alt="image" />
+                                                <div class="mask">
+                                                    <p>Your Text</p>
+                                                    <div class="tools tools-bottom">
+                                                        <a href="#"><i class="fa fa-link"></i></a>
+                                                        <a href="#"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption">
+                                                <p>Snow and Ice Incoming for the South</p>
                                             </div>
                                         </div>
-                                        <!-- /.col -->
                                     </div>
-                                    <!-- /.row -->
-
-                                    <!-- this row will not appear when printing -->
-                                    <div class="row no-print">
-                                        <div class="col-xs-12">
-                                            <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Print</button>
-                                            <button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment</button>
-                                            <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> Generate PDF</button>
+                                    <div class="col-md-55">
+                                        <div class="thumbnail">
+                                            <div class="image view view-first">
+                                                <img style="width: 100%; display: block;" src='${contextPath}/resources/images/media.jpg' alt="image" />
+                                                <div class="mask">
+                                                    <p>Your Text</p>
+                                                    <div class="tools tools-bottom">
+                                                        <a href="#"><i class="fa fa-link"></i></a>
+                                                        <a href="#"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption">
+                                                <p>Snow and Ice Incoming for the South</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </section>
+                                    <div class="col-md-55">
+                                        <div class="thumbnail">
+                                            <div class="image view view-first">
+                                                <img style="width: 100%; display: block;" src='${contextPath}/resources/images/media.jpg' alt="image" />
+                                                <div class="mask">
+                                                    <p>Your Text</p>
+                                                    <div class="tools tools-bottom">
+                                                        <a href="#"><i class="fa fa-link"></i></a>
+                                                        <a href="#"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption">
+                                                <p>Snow and Ice Incoming for the South</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-55">
+                                        <div class="thumbnail">
+                                            <div class="image view view-first">
+                                                <img style="width: 100%; display: block;" src='${contextPath}/resources/images/media.jpg' alt="image" />
+                                                <div class="mask">
+                                                    <p>Your Text</p>
+                                                    <div class="tools tools-bottom">
+                                                        <a href="#"><i class="fa fa-link"></i></a>
+                                                        <a href="#"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption">
+                                                <p>Snow and Ice Incoming for the South</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-55">
+                                        <div class="thumbnail">
+                                            <div class="image view view-first">
+                                                <img style="width: 100%; display: block;" src='${contextPath}/resources/images/media.jpg' alt="image" />
+                                                <div class="mask">
+                                                    <p>Your Text</p>
+                                                    <div class="tools tools-bottom">
+                                                        <a href="#"><i class="fa fa-link"></i></a>
+                                                        <a href="#"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption">
+                                                <p>Snow and Ice Incoming for the South</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-55">
+                                        <div class="thumbnail">
+                                            <div class="image view view-first">
+                                                <img style="width: 100%; display: block;" src='${contextPath}/resources/images/media.jpg' alt="image" />
+                                                <div class="mask no-caption">
+                                                    <div class="tools tools-bottom">
+                                                        <a href="#"><i class="fa fa-link"></i></a>
+                                                        <a href="#"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption">
+                                                <p><strong>Image Name</strong>
+                                                </p>
+                                                <p>Snow and Ice Incoming</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-55">
+                                        <div class="thumbnail">
+                                            <div class="image view view-first">
+                                                <img style="width: 100%; display: block;" src='${contextPath}/resources/images/media.jpg' alt="image" />
+                                                <div class="mask no-caption">
+                                                    <div class="tools tools-bottom">
+                                                        <a href="#"><i class="fa fa-link"></i></a>
+                                                        <a href="#"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption">
+                                                <p><strong>Image Name</strong>
+                                                </p>
+                                                <p>Snow and Ice Incoming</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-55">
+                                        <div class="thumbnail">
+                                            <div class="image view view-first">
+                                                <img style="width: 100%; display: block;" src='${contextPath}/resources/images/media.jpg' alt="image" />
+                                                <div class="mask no-caption">
+                                                    <div class="tools tools-bottom">
+                                                        <a href="#"><i class="fa fa-link"></i></a>
+                                                        <a href="#"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption">
+                                                <p><strong>Image Name</strong>
+                                                </p>
+                                                <p>Snow and Ice Incoming</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-55">
+                                        <div class="thumbnail">
+                                            <div class="image view view-first">
+                                                <img style="width: 100%; display: block;" src='${contextPath}/resources/images/media.jpg' alt="image" />
+                                                <div class="mask no-caption">
+                                                    <div class="tools tools-bottom">
+                                                        <a href="#"><i class="fa fa-link"></i></a>
+                                                        <a href="#"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption">
+                                                <p><strong>Image Name</strong>
+                                                </p>
+                                                <p>Snow and Ice Incoming</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-55">
+                                        <div class="thumbnail">
+                                            <div class="image view view-first">
+                                                <img style="width: 100%; display: block;" src='${contextPath}/resources/images/media.jpg' alt="image" />
+                                                <div class="mask no-caption">
+                                                    <div class="tools tools-bottom">
+                                                        <a href="#"><i class="fa fa-link"></i></a>
+                                                        <a href="#"><i class="fa fa-pencil"></i></a>
+                                                        <a href="#"><i class="fa fa-times"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="caption">
+                                                <p><strong>Image Name</strong>
+                                                </p>
+                                                <p>Snow and Ice Incoming</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
