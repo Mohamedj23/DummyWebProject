@@ -14,6 +14,8 @@ public class DummyController {
     }
 
     //Mohamed
+    
+    
     //Amr
     @GetMapping("/form_buttons")
     public String form_buttons() {
@@ -64,6 +66,7 @@ public class DummyController {
     }
 
     //Aya
+    
     @GetMapping("/chartjs")
     public String chartjs() {
         return "chartjs";
