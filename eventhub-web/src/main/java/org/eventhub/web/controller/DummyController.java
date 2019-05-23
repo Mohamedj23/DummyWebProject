@@ -14,7 +14,45 @@ public class DummyController {
     }
 
     //Mohamed
-    
+    @GetMapping("/media_gallery")
+    public String mediaGallery(){
+        return "media_gallery";
+    }
+
+    @GetMapping("/morisjs")
+    public String morisjs(){
+        return "morisjs";
+    }
+
+    @GetMapping("/other_charts")
+    public String otherCharts(){
+        return "other_charts";
+    }
+
+    @GetMapping("/page_403")
+    public String page403(){
+        return "page_403";
+    }
+
+    @GetMapping("/page_404")
+    public String page404(){
+        return "page_404";
+    }
+
+    @GetMapping("/page_500")
+    public String page500(){
+        return "page_500";
+    }
+
+    @GetMapping("/plain_page")
+    public String plainPage(){
+        return "plain_page";
+    }
+
+    @GetMapping("/pricing_tables")
+    public String pricingTables(){
+        return "pricing_tables";
+    }
     
     //Amr
     @GetMapping("/form_buttons")
