@@ -28,7 +28,7 @@
         <spring.test>5.1.6.RELEASE</spring.test>
         <spring.security.config>5.1.5.RELEASE</spring.security.config>
 
-        <mysql.connectorj>8.0.15</mysql.connectorj>
+        <mysql.connectorj>8.0.16</mysql.connectorj>
         <hibernate.core>5.4.1.Final</hibernate.core>
         <hibernate.validator>6.0.16.Final</hibernate.validator>
 
