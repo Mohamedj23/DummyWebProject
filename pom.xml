@@ -42,7 +42,7 @@
         <eventhub.business.layer>1.0-SNAPSHOT</eventhub.business.layer>
         <eventhub.web>1.0-SNAPSHOT</eventhub.web>
 
-        <junit>4.12</junit>
+        <junit>4.13.1</junit>
         <h2>1.4.199</h2>
     </properties>
 
