@@ -43,7 +43,7 @@
         <eventhub.web>1.0-SNAPSHOT</eventhub.web>
 
         <junit>4.12</junit>
-        <h2>1.4.199</h2>
+        <h2>2.0.206</h2>
     </properties>
 
     <dependencyManagement>
