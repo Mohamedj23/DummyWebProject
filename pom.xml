@@ -24,7 +24,7 @@
         <javaee-api>8.0</javaee-api>
         <spring>5.1.6.RELEASE</spring>
         <spring.data.jpa>2.1.6.RELEASE</spring.data.jpa>
-        <spring.web.mvc>5.1.6.RELEASE</spring.web.mvc>
+        <spring.web.mvc>5.2.20.RELEASE</spring.web.mvc>
         <spring.test>5.1.6.RELEASE</spring.test>
         <spring.security.config>5.1.5.RELEASE</spring.security.config>
 
